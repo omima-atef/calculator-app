@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body,
+* {
+  font-family: "League Spartan", sans-serif;
+  /* font-optical-sizing: auto; */
+  /* font-weight: <weight>; */
+  /* font-style: normal; */
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+input:focus {
+  outline: none;
+}
+
+main {
+  width: 440px;
+  margin: 0rem auto;
+  padding: 5rem 0;
+}
+@media (max-width: 560px) {
+  main {
+    width: 320px;
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding: 2rem 0;
+  position: relative;
+}
+.nav h1 {
+  font-size: 2.6rem;
+}
+.nav > div {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.nav ul {
+  width: 6rem;
+  height: 2.3rem;
+  border-radius: 50px;
+  background-color: hsl(0, 5%, 81%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.nav .numTheme {
+  font-size: 1.5rem;
+  width: 6rem;
+  height: 2.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+}
+.nav ul li {
+  list-style-type: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+input[type="text"] {
+  width: 100%;
+  border-radius: 1rem;
+  font-size: 5rem;
+  font-weight: bold;
+  overflow: hidden;
+  height: 11rem;
+  padding: 2rem;
+}
+@media (max-width: 560px) {
+  input[type="text"] {
+    font-size: 3rem;
+    height: 8rem;
+    padding: 2rem;
+  }
+}
+
+.keysCalc {
+  border-radius: 1rem;
+  margin: 2rem 0 5rem;
+  padding: 1rem;
+}
+.keysCalc ul {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+input {
+  font-size: 3rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background: #0000;
+}
+.special input,
+.equal input {
+  font-size: 2rem;
+}
+@media (max-width: 560px) {
+  .special input,
+  .equal input {
+    font-size: 1.6rem;
+  }
+}
+.keysCalc ul li {
+  list-style-type: none;
+  border-radius: 1rem;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100%);
+  flex-shrink: 1;
+  height: 5rem;
+
+  transition: 0.3s;
+}
+
+.special input,
+.equal input {
+  color: hsl(0, 100%, 100%);
+}
+/* Theme 1 */
+.app.theme1 {
+  background: hsl(222, 26%, 31%);
+}
+.theme1 .nav {
+  color: hsl(0, 100%, 100%);
+}
+.theme1 .keysCalc {
+  background-color: hsl(223, 31%, 20%);
+}
+.theme1 .keysCalc ul li:not(.equal, .special) {
+  background-color: hsl(0, 0%, 90%);
+  box-shadow: 0px 4px 0 hsl(28, 16%, 65%);
+}
+.theme1 .keysCalc ul li:not(.equal, .special):hover {
+  background-color: hsl(0deg 0% 100%);
+}
+.theme1 .keysCalc ul li:not(.equal, .special) input {
+  color: hsl(221, 14%, 31%);
+}
+.theme1 input[type="text"] {
+  background: hsl(224, 36%, 15%);
+  color: hsl(0, 100%, 100%);
+}
+.theme1 .special {
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0px 4px 0 hsl(224, 28%, 35%);
+}
+.theme1 .special:hover {
+  background-color: hsl(223.81deg 51.22% 75.88%);
+}
+.theme1 .equal,
+.theme1 .nav ul li:first-child {
+  background-color: hsl(6, 63%, 50%);
+}
+.theme1 .equal {
+  box-shadow: 0px 4px 0 hsl(6, 70%, 34%);
+}
+.theme1 .equal:hover,
+.theme1 .nav ul li:first-child:hover {
+  background-color: hsl(6.46deg 92.94% 66.67%);
+}
+
+/* Theme 2 */
+.app.theme2 {
+  background: hsl(0, 0%, 90%);
+}
+.theme2 .nav {
+  color: hsl(60, 10%, 19%);
+}
+.theme2 .keysCalc {
+  background-color: hsl(0, 5%, 81%);
+}
+.theme2 .keysCalc ul li:not(.equal, .special) {
+  background-color: hsl(0, 0%, 90%);
+  box-shadow: 0px 4px 0 hsl(35, 11%, 61%);
+}
+.theme2 .keysCalc ul li:not(.equal, .special):hover {
+  background-color: hsl(0deg 0% 100%);
+}
+.theme2 .keysCalc ul li:not(.equal, .special) input {
+  color: hsl(60, 10%, 19%);
+}
+.theme2 input[type="text"] {
+  background: hsl(0, 0%, 93%);
+  color: hsl(60, 10%, 19%);
+}
+.theme2 .special {
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0px 4px 0 hsl(185, 58%, 25%);
+}
+.theme2 .special:hover {
+  background-color: hsl(185.27deg 40.81% 56.27%);
+}
+.theme2 .equal,
+.theme2 .nav ul li:nth-of-type(2) {
+  background-color: hsl(25, 98%, 40%);
+}
+.theme2 .equal {
+  box-shadow: 0px 4px 0 hsl(25, 99%, 27%);
+}
+.theme2 .equal:hover,
+.theme2 .nav ul li:nth-of-type(2):hover {
+  background-color: hsl(25.03deg 100% 60.98%);
+}
+/* Theme 3 */
+.app.theme3 {
+  background: hsl(268, 75%, 9%);
+}
+.theme3 .nav {
+  color: hsl(52, 100%, 62%);
+}
+.theme3 .keysCalc {
+  background-color: hsl(268, 71%, 12%);
+}
+.theme3 .keysCalc ul li:not(.equal, .special) {
+  background-color: hsl(268, 47%, 21%);
+  box-shadow: 0px 4px 0 hsl(290, 70%, 36%);
+}
+.theme3 .keysCalc ul li:not(.equal, .special):hover {
+  background-color: hsl(267.5deg 53.57% 43.92%);
+}
+.theme3 .keysCalc ul li:not(.equal, .special) input {
+  color: hsl(52, 100%, 62%);
+}
+.theme3 input[type="text"] {
+  background: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
+}
+.theme3 .special {
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0px 4px 0 hsl(285, 91%, 52%);
+}
+.theme3 .special:hover {
+  background-color: hsl(280.16deg 56.44% 44.12%);
+}
+.theme3 .equal,
+.theme3 .nav ul li:last-child {
+  background-color: hsl(176, 100%, 44%);
+}
+.theme3 .equal:hover,
+.theme3 .nav ul li:last-child:hover {
+  background-color: hsl(176.64deg 100% 79.02%);
+}
+.theme3 .equal {
+  box-shadow: 0px 4px 0 hsl(177, 92%, 70%);
+}
+.theme3 .equal input {
+  color: hsl(198, 20%, 13%);
+}
+
+/*
+
+#### Backgrounds
+
+- Purple 950 (main background): hsl(268, 75%, 9%)
+- Purple 900 (toggle background, keypad background, screen background): hsl(268, 71%, 12%)
+
+#### Keys
+
+- Purple 800 (key background): hsl(281, 89%, 26%)
+- Purple 400 (key shadow): hsl(285, 91%, 52%)
+
+- Cyan 500 (key background, toggle): hsl(176, 100%, 44%)
+- Cyan 400 (key shadow): hsl(177, 92%, 70%)
+
+- Purple 850 (key background): hsl(268, 47%, 21%)
+- Purple 750 (key shadow): hsl(290, 70%, 36%)
+
+#### Text
+
+- Yellow 300: hsl(52, 100%, 62%)
+- Blue 950: hsl(198, 20%, 13%)
+- White (text): hsl(0, 100%, 100%)
+
+ */
