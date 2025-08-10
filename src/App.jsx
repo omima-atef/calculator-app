@@ -130,17 +130,17 @@ function DisplayNum({ displayNums }) {
 
 function LineKeys({ setKeys, displayNums }) {
   return (
-    <ul>
+    <div className="listNumbers">
       {setKeys.map((value, index) => (
         <InputKey value={value} key={index} displayNums={displayNums} />
       ))}
-    </ul>
+    </div>
   );
 }
 
 function InputKey({ value, displayNums }) {
   return (
-    <li
+    <button
       className={`${value.length > 1 ? "special" : ""} ${
         value === "=" ? "equal" : ""
       }`}
@@ -156,6 +156,6 @@ function InputKey({ value, displayNums }) {
       aria-label={`button ${value}`}
     >
       <input type="button" value={value} readOnly />
-    </li>
+    </button>
   );
 }
