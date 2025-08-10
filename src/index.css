@@ -123,7 +123,7 @@ input {
     font-size: 1.6rem;
   }
 }
-.keysCalc .listNumbers button {
+.keysCalc .listNumbers span {
   border: none;
   border-radius: 1rem;
   flex-grow: 1;
@@ -150,14 +150,14 @@ input {
 .theme1 .keysCalc {
   background-color: hsl(223, 31%, 20%);
 }
-.theme1 .keysCalc .listNumbers button:not(.equal, .special) {
+.theme1 .keysCalc .listNumbers span:not(.equal, .special) {
   background-color: hsl(0, 0%, 90%);
   box-shadow: 0px 4px 0 hsl(28, 16%, 65%);
 }
-.theme1 .keysCalc .listNumbers button:not(.equal, .special):hover {
+.theme1 .keysCalc .listNumbers span:not(.equal, .special):hover {
   background-color: hsl(0deg 0% 100%);
 }
-.theme1 .keysCalc .listNumbers button:not(.equal, .special) input {
+.theme1 .keysCalc .listNumbers span:not(.equal, .special) input {
   color: hsl(221, 14%, 31%);
 }
 .theme1 input[type="text"] {
@@ -193,14 +193,14 @@ input {
 .theme2 .keysCalc {
   background-color: hsl(0, 5%, 81%);
 }
-.theme2 .keysCalc .listNumbers button:not(.equal, .special) {
+.theme2 .keysCalc .listNumbers span:not(.equal, .special) {
   background-color: hsl(0, 0%, 90%);
   box-shadow: 0px 4px 0 hsl(35, 11%, 61%);
 }
-.theme2 .keysCalc .listNumbers button:not(.equal, .special):hover {
+.theme2 .keysCalc .listNumbers span:not(.equal, .special):hover {
   background-color: hsl(0deg 0% 100%);
 }
-.theme2 .keysCalc .listNumbers button:not(.equal, .special) input {
+.theme2 .keysCalc .listNumbers span:not(.equal, .special) input {
   color: hsl(60, 10%, 19%);
 }
 .theme2 input[type="text"] {
@@ -235,14 +235,14 @@ input {
 .theme3 .keysCalc {
   background-color: hsl(268, 71%, 12%);
 }
-.theme3 .keysCalc .listNumbers button:not(.equal, .special) {
+.theme3 .keysCalc .listNumbers span:not(.equal, .special) {
   background-color: hsl(268, 47%, 21%);
   box-shadow: 0px 4px 0 hsl(290, 70%, 36%);
 }
-.theme3 .keysCalc .listNumbers button:not(.equal, .special):hover {
+.theme3 .keysCalc .listNumbers span:not(.equal, .special):hover {
   background-color: hsl(267.5deg 53.57% 43.92%);
 }
-.theme3 .keysCalc .listNumbers button:not(.equal, .special) input {
+.theme3 .keysCalc .listNumbers span:not(.equal, .special) input {
   color: hsl(52, 100%, 62%);
 }
 .theme3 input[type="text"] {

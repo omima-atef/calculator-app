@@ -140,22 +140,25 @@ function LineKeys({ setKeys, displayNums }) {
 
 function InputKey({ value, displayNums }) {
   return (
-    <button
+    <span
       className={`${value.length > 1 ? "special" : ""} ${
         value === "=" ? "equal" : ""
       }`}
       onClick={() => displayNums(value)}
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          displayNums(value);
-        }
-      }}
-      role="button"
-      aria-pressed="false"
-      aria-label={`button ${value}`}
     >
-      <input type="button" value={value} readOnly />
-    </button>
+      <input
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            displayNums(value);
+          }
+        }}
+        aria-pressed="false"
+        aria-label={`button ${value}`}
+        type="button"
+        value={value}
+        readOnly
+      />
+    </span>
   );
 }
