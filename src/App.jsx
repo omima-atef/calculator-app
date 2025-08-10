@@ -145,20 +145,17 @@ function InputKey({ value, displayNums }) {
         value === "=" ? "equal" : ""
       }`}
       onClick={() => displayNums(value)}
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          displayNums(value);
+        }
+      }}
+      aria-pressed="false"
+      aria-label={`button ${value}`}
+      role="button"
     >
-      <input
-        tabIndex={0}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            displayNums(value);
-          }
-        }}
-        aria-pressed="false"
-        aria-label={`button ${value}`}
-        type="button"
-        value={value}
-        readOnly
-      />
+      {value}
     </span>
   );
 }
