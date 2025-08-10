@@ -21,13 +21,16 @@ export default function App() {
     if (value === "=") {
       if (total.length === 0) return;
       if (operators.includes(total.slice(-1))) return;
-
       try {
         const expression = total.replace(/x/g, "*");
         const result = eval(expression);
+        if (result === Infinity) {
+          throw new Error("Result is Infinity");
+        }
         setTotal(result.toString());
       } catch {
-        setTotal("error");
+        setTotal("");
+        alert("Error");
       }
       return;
     }
