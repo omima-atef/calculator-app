@@ -86,6 +86,7 @@ input[type="text"] {
   overflow: hidden;
   height: 11rem;
   padding: 2rem;
+  border: none;
 }
 @media (max-width: 560px) {
   input[type="text"] {
@@ -106,25 +107,20 @@ input[type="text"] {
   padding: 1rem;
 }
 
-input {
-  font-size: 3rem;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  background: #0000;
-}
-.special input,
-.equal input {
+.special,
+.equal {
   font-size: 2rem;
+  color: hsl(0, 100%, 100%);
 }
 @media (max-width: 560px) {
-  .special input,
-  .equal input {
+  .special,
+  .equal {
     font-size: 1.6rem;
   }
 }
 .keysCalc .listNumbers span {
-  border: none;
+  font-size: 3rem;
+  font-weight: bold;
   border-radius: 1rem;
   flex-grow: 1;
   display: flex;
@@ -136,10 +132,6 @@ input {
   transition: 0.3s;
 }
 
-.special input,
-.equal input {
-  color: hsl(0, 100%, 100%);
-}
 /* Theme 1 */
 .app.theme1 {
   background: hsl(222, 26%, 31%);
@@ -153,12 +145,10 @@ input {
 .theme1 .keysCalc .listNumbers span:not(.equal, .special) {
   background-color: hsl(0, 0%, 90%);
   box-shadow: 0px 4px 0 hsl(28, 16%, 65%);
+  color: hsl(221, 14%, 31%);
 }
 .theme1 .keysCalc .listNumbers span:not(.equal, .special):hover {
   background-color: hsl(0deg 0% 100%);
-}
-.theme1 .keysCalc .listNumbers span:not(.equal, .special) input {
-  color: hsl(221, 14%, 31%);
 }
 .theme1 input[type="text"] {
   background: hsl(224, 36%, 15%);
@@ -196,12 +186,10 @@ input {
 .theme2 .keysCalc .listNumbers span:not(.equal, .special) {
   background-color: hsl(0, 0%, 90%);
   box-shadow: 0px 4px 0 hsl(35, 11%, 61%);
+  color: hsl(60, 10%, 19%);
 }
 .theme2 .keysCalc .listNumbers span:not(.equal, .special):hover {
   background-color: hsl(0deg 0% 100%);
-}
-.theme2 .keysCalc .listNumbers span:not(.equal, .special) input {
-  color: hsl(60, 10%, 19%);
 }
 .theme2 input[type="text"] {
   background: hsl(0, 0%, 93%);
@@ -238,12 +226,10 @@ input {
 .theme3 .keysCalc .listNumbers span:not(.equal, .special) {
   background-color: hsl(268, 47%, 21%);
   box-shadow: 0px 4px 0 hsl(290, 70%, 36%);
+  color: hsl(52, 100%, 62%);
 }
 .theme3 .keysCalc .listNumbers span:not(.equal, .special):hover {
   background-color: hsl(267.5deg 53.57% 43.92%);
-}
-.theme3 .keysCalc .listNumbers span:not(.equal, .special) input {
-  color: hsl(52, 100%, 62%);
 }
 .theme3 input[type="text"] {
   background: hsl(268, 71%, 12%);
@@ -266,33 +252,5 @@ input {
 }
 .theme3 .equal {
   box-shadow: 0px 4px 0 hsl(177, 92%, 70%);
-}
-.theme3 .equal input {
   color: hsl(198, 20%, 13%);
 }
-
-/*
-
-#### Backgrounds
-
-- Purple 950 (main background): hsl(268, 75%, 9%)
-- Purple 900 (toggle background, keypad background, screen background): hsl(268, 71%, 12%)
-
-#### Keys
-
-- Purple 800 (key background): hsl(281, 89%, 26%)
-- Purple 400 (key shadow): hsl(285, 91%, 52%)
-
-- Cyan 500 (key background, toggle): hsl(176, 100%, 44%)
-- Cyan 400 (key shadow): hsl(177, 92%, 70%)
-
-- Purple 850 (key background): hsl(268, 47%, 21%)
-- Purple 750 (key shadow): hsl(290, 70%, 36%)
-
-#### Text
-
-- Yellow 300: hsl(52, 100%, 62%)
-- Blue 950: hsl(198, 20%, 13%)
-- White (text): hsl(0, 100%, 100%)
-
- */
