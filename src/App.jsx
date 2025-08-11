@@ -85,9 +85,9 @@ function Nav({ setTheme }) {
             <span>3</span>
           </div>
           <ul>
-            <li onClick={() => setTheme("theme1")} aria-label="Theme 1"></li>
-            <li onClick={() => setTheme("theme2")} aria-label="Theme 2"></li>
-            <li onClick={() => setTheme("theme3")} aria-label="Theme 3"></li>
+            <li onClick={() => setTheme("theme1")}></li>
+            <li onClick={() => setTheme("theme2")}></li>
+            <li onClick={() => setTheme("theme3")}></li>
           </ul>
         </div>
       </div>
@@ -140,7 +140,7 @@ function LineKeys({ setKeys, displayNums }) {
 
 function InputKey({ value, displayNums }) {
   return (
-    <span
+    <button
       className={`${value.length > 1 ? "special" : ""} ${
         value === "=" ? "equal" : ""
       }`}
@@ -151,11 +151,9 @@ function InputKey({ value, displayNums }) {
           displayNums(value);
         }
       }}
-      aria-pressed="false"
       aria-label={`button ${value}`}
-      role="button"
     >
       {value}
-    </span>
+    </button>
   );
 }

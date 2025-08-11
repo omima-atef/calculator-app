@@ -19,18 +19,19 @@ body,
   line-height: 1.6;
 }
 
-input:focus {
+input:focus,
+button {
   outline: none;
 }
 
 main {
-  width: 440px;
+  width: 44rem;
   margin: 0rem auto;
   padding: 5rem 0;
 }
 @media (max-width: 560px) {
   main {
-    width: 320px;
+    width: 32rem;
   }
 }
 .nav {
@@ -78,6 +79,11 @@ main {
   border-radius: 50%;
   transition: 0.3s;
 }
+@media (prefers-reduced-motion: reduce) {
+  .nav ul li {
+    transition: none;
+  }
+}
 input[type="text"] {
   width: 100%;
   border-radius: 1rem;
@@ -101,7 +107,7 @@ input[type="text"] {
   margin: 2rem 0 5rem;
   padding: 1rem;
 }
-.keysCalc .listNumbers {
+.listNumbers {
   display: flex;
   gap: 2rem;
   padding: 1rem;
@@ -118,7 +124,7 @@ input[type="text"] {
     font-size: 1.6rem;
   }
 }
-.keysCalc .listNumbers span {
+.listNumbers button {
   font-size: 3rem;
   font-weight: bold;
   border-radius: 1rem;
@@ -130,6 +136,13 @@ input[type="text"] {
   flex-shrink: 1;
   height: 5rem;
   transition: 0.3s;
+  border: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .listNumbers button {
+    transition: none;
+  }
 }
 
 /* Theme 1 */
@@ -142,12 +155,12 @@ input[type="text"] {
 .theme1 .keysCalc {
   background-color: hsl(223, 31%, 20%);
 }
-.theme1 .keysCalc .listNumbers span:not(.equal, .special) {
+.theme1 .listNumbers button:not(.equal, .special) {
   background-color: hsl(0, 0%, 90%);
   box-shadow: 0px 4px 0 hsl(28, 16%, 65%);
   color: hsl(221, 14%, 31%);
 }
-.theme1 .keysCalc .listNumbers span:not(.equal, .special):hover {
+.theme1 .listNumbers button:not(.equal, .special):hover {
   background-color: hsl(0deg 0% 100%);
 }
 .theme1 input[type="text"] {
@@ -183,12 +196,12 @@ input[type="text"] {
 .theme2 .keysCalc {
   background-color: hsl(0, 5%, 81%);
 }
-.theme2 .keysCalc .listNumbers span:not(.equal, .special) {
+.theme2 .listNumbers button:not(.equal, .special) {
   background-color: hsl(0, 0%, 90%);
   box-shadow: 0px 4px 0 hsl(35, 11%, 61%);
   color: hsl(60, 10%, 19%);
 }
-.theme2 .keysCalc .listNumbers span:not(.equal, .special):hover {
+.theme2 .listNumbers button:not(.equal, .special):hover {
   background-color: hsl(0deg 0% 100%);
 }
 .theme2 input[type="text"] {
@@ -223,12 +236,12 @@ input[type="text"] {
 .theme3 .keysCalc {
   background-color: hsl(268, 71%, 12%);
 }
-.theme3 .keysCalc .listNumbers span:not(.equal, .special) {
+.theme3 .listNumbers button:not(.equal, .special) {
   background-color: hsl(268, 47%, 21%);
   box-shadow: 0px 4px 0 hsl(290, 70%, 36%);
   color: hsl(52, 100%, 62%);
 }
-.theme3 .keysCalc .listNumbers span:not(.equal, .special):hover {
+.theme3 .listNumbers button:not(.equal, .special):hover {
   background-color: hsl(267.5deg 53.57% 43.92%);
 }
 .theme3 input[type="text"] {
