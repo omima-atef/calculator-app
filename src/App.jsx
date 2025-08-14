@@ -24,10 +24,11 @@ export default function App() {
       try {
         const expression = total.replace(/x/g, "*");
         const result = eval(expression);
+        const roundedResult = Math.round(result * 1000) / 1000;
         if (result === Infinity) {
           throw new Error("Result is Infinity");
         }
-        setTotal(result.toString());
+        setTotal(roundedResult.toString());
       } catch {
         setTotal("");
         alert("Error");
@@ -101,7 +102,6 @@ function Display({ total }) {
       <input
         type="text"
         name="value"
-        dir="rtl"
         placeholder="0"
         value={total}
         readOnly
